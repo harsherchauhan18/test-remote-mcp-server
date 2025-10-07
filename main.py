@@ -11,9 +11,6 @@ print(f"Database path: {DB_PATH}")
 
 mcp = FastMCP("ExpenseTracker")
 
-
-
-
 def init_db():  # Keep as sync for initialization
     try:
         # Use synchronous sqlite3 just for initialization
@@ -131,6 +128,5 @@ def categories():
 
 # Start the server
 if __name__ == "__main__":
-    # chnanges for remote mcp server
     mcp.run(transport="http", host="0.0.0.0", port=8000)
     # mcp.run()
